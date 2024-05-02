@@ -1,8 +1,10 @@
 package com.example.demo.ch01;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 
 public class PasswordStrengthMeterTests {
 
@@ -91,4 +93,21 @@ public class PasswordStrengthMeterTests {
         PasswordStrength result = meter.meter("!@#");
         assertEquals(PasswordStrength.WEAK, result);
     }
+
+    // @RepeatedTest(value = 10, name =  RepeatedTest.LONG_DISPLAY_NAME)
+    // @DisplayName("반복테스트")
+    // void 반복테스트() {
+    //     PasswordStrengthMeter meter = new PasswordStrengthMeter();
+    //     PasswordStrength result = meter.meter("ab12!@AB");
+    //     assertEquals(PasswordStrength.NORMAL, result);
+    // }
+
+    // @Test
+    // @DisplayName("time_out 테스트")
+    // @Timeout(5)
+    // void timeout() throws InterruptedException {
+    //     Thread.sleep(3000);
+    // }
+
+
 }
