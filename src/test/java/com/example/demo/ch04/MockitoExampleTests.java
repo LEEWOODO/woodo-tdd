@@ -2,7 +2,6 @@ package com.example.demo.ch04;
 
 import static org.mockito.ArgumentMatchers.*;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -32,15 +31,18 @@ import com.example.demo.ch04.service.TicketingService;
 @ExtendWith(MockitoExtension.class)
 public class MockitoExampleTests {
 
+	@Mock
+	private PerformanceService performanceService;
+
+	@Mock
+	private ReservationRepository reservationRepository;
+
+	@InjectMocks
 	private TicketingService ticketingService;
 
 	@Test
-	void MockitoMockInstanceTest(){
-		PerformanceService performanceService = Mockito.mock(PerformanceService.class);
-		ReservationRepository reservationRepository = Mockito.mock(ReservationRepository.class);
-
-		// Mock 객체를 이용한 의존성 문제 해결
-		ticketingService = new TicketingService(performanceService, reservationRepository);
+	void MockitoMockInstanceTest() {
+		// Mock, InjectMocks 어노테이션을 이용한 의존성 문제 해결
 		Ticket t = Ticket.builder()
 			.performanceId(UUID.fromString("adc45fd5-dab9-11ee-9743-0242ac130002"))
 			.performanceName("공연이름")
@@ -52,7 +54,6 @@ public class MockitoExampleTests {
 			.seat(1)
 			.appliedPolicies(List.of("telecome"))
 			.build();
-
 
 		// When : 호출이 되는 것을 기대하는 메서드에 대한 기대 행위를 명시
 		Mockito.when(performanceService.isEnableReserve(any())).then(invocationOnMock -> {
@@ -66,6 +67,5 @@ public class MockitoExampleTests {
 		Mockito.verify(reservationRepository, Mockito.times(1)).save(any());
 
 	}
-
 
 }
