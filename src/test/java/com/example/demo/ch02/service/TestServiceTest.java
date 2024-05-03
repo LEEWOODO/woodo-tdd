@@ -1,7 +1,5 @@
 package com.example.demo.ch02.service;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
 
 /**

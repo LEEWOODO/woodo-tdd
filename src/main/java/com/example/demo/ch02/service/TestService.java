@@ -10,12 +10,6 @@ public class TestService {
 	// private static final Logger log = LoggerFactory.getLogger(TestService.class);
 
 	public void create() {
-		// log.info("TestService.create() called");
-		System.out.println("TestService.create() called");
-		System.out.println("TestService.create() called");
-		System.out.println("TestService.create() called");
-		System.out.println("TestService.create() called");
-		System.out.println("TestService.create() called");
 		System.out.println("TestService.create() called");
 	}
 }
