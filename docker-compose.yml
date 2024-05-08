@@ -1,0 +1,17 @@
+services:
+  mysql:
+    user: 501:20
+    image: mysql:8.0.33
+    ports:
+      - 13306:3306
+    volumes:
+      - /Users/dnejdzlr2/Documents/my-fastcampus/TDD_초격차/woodo-tdd/mysql_data:/var/lib/mysql:rw
+      - /Users/dnejdzlr2/Documents/my-fastcampus/TDD_초격차/woodo-tdd/src/main/resources/initdb:/docker-entrypoint-initdb.d
+    command:
+      - '--character-set-server=utf8mb4'
+      - '--collation-server=utf8mb4_unicode_ci'
+    environment:
+      MYSQL_DATABASE: testlabs
+      MYSQL_USER: fastcamp
+      MYSQL_PASSWORD: testcode
+      MYSQL_ROOT_PASSWORD: preonboarding
