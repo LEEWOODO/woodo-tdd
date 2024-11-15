@@ -53,5 +53,10 @@ public class TicketingService {
 		reservationRepository.deleteAll();
 	}
 
+	@Transactional
+	public void cancel(Ticket t) {
+		Reservation r = getReservedInfo(t);
+		reservationRepository.delete(r);
+	}
 
 }
