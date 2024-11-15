@@ -8,6 +8,7 @@ public class WoodoTddApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(WoodoTddApplication.class, args);
+		System.out.println("Hello World woodo-1");
 	}
 
 }
