@@ -48,4 +48,32 @@ public class TicketingService {
 		);
 	}
 
+	// todo delete this method for test
+	public void deleteAll() {
+		reservationRepository.deleteAll();
+	}
+
+	@Transactional
+	public void cancel(Ticket t) {
+		Reservation r = getReservedInfo(t);
+		reservationRepository.delete(r);
+	}
+
+	@Transactional
+	public void cancel2(Ticket t) {
+		Reservation r = getReservedInfo(t);
+		reservationRepository.delete(r);
+	}
+
+	@Transactional
+	public void cancel3(Ticket t) {
+		Reservation r = getReservedInfo(t);
+		reservationRepository.delete(r);
+	}
+
+	@Transactional
+	public void cancel4(Ticket t) {
+		Reservation r = getReservedInfo(t);
+		reservationRepository.delete(r);
+	}
 }
