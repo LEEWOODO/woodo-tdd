@@ -35,6 +35,7 @@ public class TicketingService {
 		System.out.println("t = " + t);
 		System.out.println("t2222 = " + t);
 		System.out.println("t4444 = " + t);
+		System.out.println("t44444444 = " + t);
 		return reservationRepository.findReservationByPerformanceIdAndRoundAndGateAndLineAndSeatAndNameAndPhoneNumber(
 			t.getPerformanceId(),
 			t.getRound(),
