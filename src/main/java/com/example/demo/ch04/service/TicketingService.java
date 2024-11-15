@@ -35,6 +35,7 @@ public class TicketingService {
 		System.out.println("hotfix = " + t);
 		System.out.println("now i am main = " + t);
 		System.out.println("now i am main222 = " + t);
+		System.out.println("now i am main333 = " + t);
 		return reservationRepository.findReservationByPerformanceIdAndRoundAndGateAndLineAndSeatAndNameAndPhoneNumber(
 			t.getPerformanceId(),
 			t.getRound(),
