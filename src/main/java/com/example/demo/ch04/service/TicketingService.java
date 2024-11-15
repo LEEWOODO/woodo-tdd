@@ -48,4 +48,10 @@ public class TicketingService {
 		);
 	}
 
+	// todo delete this method for test
+	public void deleteAll() {
+		reservationRepository.deleteAll();
+	}
+
+
 }
