@@ -37,6 +37,8 @@ public class TestController {
 	public ResponseEntity<String> test() {
 		System.out.println("TestController.test() called");
 		System.out.println("TestController.test() called222");
+		System.out.println("TestController.test() called333");
+		System.out.println("TestController.test() called444");
 		testService.create();
 
 		// performanceRepository.findAll();
