@@ -10,6 +10,7 @@ public class WoodoTddApplication {
 		SpringApplication.run(WoodoTddApplication.class, args);
 		System.out.println("Hello World i must 2 ");
 		System.out.println("Hello World i must 3 ");
+		System.out.println("Hello i am staging commit 1");
 	}
 
 }
